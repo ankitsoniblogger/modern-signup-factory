@@ -67,6 +67,7 @@ const OTPVerification = () => {
                       <InputOTPSlot
                         key={index}
                         {...slot}
+                        index={index}
                         className="h-12 w-12 text-lg"
                       />
                     ))}
