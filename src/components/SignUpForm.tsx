@@ -1,4 +1,3 @@
-
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
@@ -77,9 +76,9 @@ export function SignUpForm() {
   }
 
   return (
-    <div className="bg-white/80 backdrop-blur-lg rounded-2xl p-6 md:p-8 shadow-lg border border-purple-100">
+    <div className="bg-white/80 backdrop-blur-lg rounded-2xl p-6 md:p-8 shadow-xl border border-purple-100">
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
           <FormField
             control={form.control}
             name="fullName"
@@ -226,7 +225,10 @@ export function SignUpForm() {
             whileHover={{ scale: 1.01 }}
             whileTap={{ scale: 0.99 }}
           >
-            <Button type="submit" className="w-full h-11 bg-purple-600 hover:bg-purple-700">
+            <Button 
+              type="submit" 
+              className="w-full h-12 bg-purple-600 hover:bg-purple-700 transition-all duration-200"
+            >
               Create Account
             </Button>
           </motion.div>
