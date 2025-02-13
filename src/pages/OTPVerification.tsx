@@ -9,6 +9,7 @@ import {
   InputOTP,
   InputOTPGroup,
   InputOTPSlot,
+  InputOTPSeparator,
 } from "@/components/ui/input-otp";
 
 const OTPVerification = () => {
@@ -58,22 +59,19 @@ const OTPVerification = () => {
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-2">
               <InputOTP
+                maxLength={6}
                 value={otp}
                 onChange={(value) => setOtp(value)}
-                maxLength={6}
-                pattern="\d*"
-                render={({ slots }) => (
-                  <InputOTPGroup className="gap-2 flex justify-center">
-                    {Array.from({ length: 6 }).map((_, index) => (
-                      <InputOTPSlot
-                        key={index}
-                        index={index}
-                        className="h-12 w-12 text-lg"
-                      />
-                    ))}
-                  </InputOTPGroup>
-                )}
-              />
+              >
+                <InputOTPGroup className="gap-2 flex justify-center">
+                  <InputOTPSlot index={0} className="h-12 w-12 text-lg" />
+                  <InputOTPSlot index={1} className="h-12 w-12 text-lg" />
+                  <InputOTPSlot index={2} className="h-12 w-12 text-lg" />
+                  <InputOTPSlot index={3} className="h-12 w-12 text-lg" />
+                  <InputOTPSlot index={4} className="h-12 w-12 text-lg" />
+                  <InputOTPSlot index={5} className="h-12 w-12 text-lg" />
+                </InputOTPGroup>
+              </InputOTP>
             </div>
 
             <div className="flex items-center justify-center gap-2 text-sm text-gray-600">
