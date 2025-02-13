@@ -61,12 +61,12 @@ const OTPVerification = () => {
                 value={otp}
                 onChange={(value) => setOtp(value)}
                 maxLength={6}
+                pattern="\d*"
                 render={({ slots }) => (
                   <InputOTPGroup className="gap-2 flex justify-center">
-                    {slots.map((slot, index) => (
+                    {Array.from({ length: 6 }).map((_, index) => (
                       <InputOTPSlot
                         key={index}
-                        {...slot}
                         index={index}
                         className="h-12 w-12 text-lg"
                       />
