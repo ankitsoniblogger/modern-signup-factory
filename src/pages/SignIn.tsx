@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -112,12 +111,12 @@ const SignIn = () => {
                 />
 
                 <div className="flex items-center justify-end">
-                  <a
-                    href="#"
+                  <Link
+                    to="/forgot-password"
                     className="text-sm text-purple-600 hover:text-purple-700"
                   >
                     Forgot password?
-                  </a>
+                  </Link>
                 </div>
 
                 <motion.div
